@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+
+    <style>
+     
+      .main {
+        height: 100vh;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #D4F6FF;
+      }
+
+      .account {
+        height: 300px;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 3px 2px   #FF6500;
+        max-width: 400px;
+        width: 100%;
+      }
+      .action button {
+        height: 50px;
+        font-size: 20px;
+        background-color: #08C2FF;
+        color: black;
+        border: 1px  grey;
+        border-radius: 6px;
+        width: 40%;   
+        margin-top: 10px;
+      }
+      .action button:hover {
+        
+
+        background-color: #03AED2;
+      }
+      .content{
+        color: #FF6500;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="account">
+        <div class="banking">
+          <div class="welcome">
+            <h1>Welcome</h1>
+          </div>
+          <div class="content">
+            <h2>
+              To Get your details, please click on
+             Account-details
+            </h2>
+          </div>
+          <div class="action">
+            <button onclick="acc()">Account-details</button>
+            
+          </div>
+         
+        </div>
+        <div class="action">
+          <button onclick="acc1()">Back</button>
+        </div>
+      </div>
+    </div>
+  
+
+    <script>
+      function acc() {
+        let value = +prompt("Enter 4 digits Pin   hint: 5075");
+        const pin = 5075;
+
+        const valid = value === pin;
+
+        if (valid) {
+          alert("Access granted.");
+          window.location.href = "bank.html";
+        } else {
+          alert("Incorrect Pin. Please try again.");
+        }
+      }
+      function acc1() {
+
+{
+          alert("Thank you visit again")
+          window.location.href ="index.html"
+        }
+      }
+    </script>
+  </body>
+</html>
